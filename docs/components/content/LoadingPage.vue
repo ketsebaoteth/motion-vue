@@ -55,7 +55,7 @@ const floatingItems = [
 <template>
   <div class="min-h-screen bg-background">
     <!-- Hero Section -->
-    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
+    <div class="relative pt-28 pb-28 -mt-10 sm:pt-40 sm:pb-24">
       <!-- Main Content -->
       <motion.div
         initial="hidden"
@@ -66,17 +66,27 @@ const floatingItems = [
         :in-view-options="{ once: true }"
         class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        <div class="text-center">
+        <div class="text-center flex flex-col items-center">
+          <div class="flex text-sm place-items-center pr-2 cursor-pointer hover:bg-accent w-fit mb-5 gap-3 border p-1 rounded-full border-border">
+            <div class="newtag text-background font-bold flex place-items-center px-3 py-[2px] bg-primary rounded-full">
+              New
+            </div>
+            V0.8.1 is out Now 🎉
+            <Icon
+              name="lucide:chevron-right"
+              class="size-4 text-foreground"
+            />
+          </div>
           <motion.h1
             v-bind="slideUp"
-            class="text-5xl md:text-7xl font-bold text-foreground mb-6 "
+            class="text-5xl  md:text-7xl font-bold text-foreground mb-2 "
           >
             Motion for
             <span class="text-green-500">Vue.</span>
           </motion.h1>
           <motion.p
             v-bind="slideUp"
-            class="max-w-2xl mx-auto text-xl text-muted-foreground mb-10 "
+            class="max-w-2xl mx-auto text-lg text-muted-foreground mb-7 "
           >
             Build beautiful motion-driven interfaces with Vue.js based on <a
               href="https://www.framer.com/motion/"
@@ -90,27 +100,31 @@ const floatingItems = [
             class="flex justify-center space-x-4 "
           >
             <UiButton
-              size="lg"
-              class="rounded-full text-primary-foreground"
+              class="rounded-md text-background font-bold"
               as="a"
               href="/getting-started"
             >
               Get Started
             </UiButton>
-            <UiButton
-              variant="outline"
-              class="rounded-full"
-              size="lg"
-              as="a"
-              href="https://github.com/unovue/motion-vue"
-              target="_blank"
-            >
+            <div class="flex rounded-md place-items-center gap-3 border border-border p-1 px-3 pr-1">
               <Icon
-                name="uil:github"
-                class="w-5 h-5"
+                name="lucide:terminal"
+                class="size-5 text-muted-foreground"
               />
-              GitHub
-            </UiButton>
+              <span class="font-mono">
+                npm i motion-v
+              </span>
+              <UiButton
+                size="icon"
+                variant="outline"
+                class="flex ml-10 size-6"
+              >
+                <Icon
+                  name="lucide:copy"
+                  class="size-3 text-muted-foreground cursor-pointer"
+                />
+              </UiButton>
+            </div>
           </motion.div>
         </div>
       </motion.div>

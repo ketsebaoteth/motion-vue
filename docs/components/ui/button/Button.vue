@@ -33,8 +33,8 @@ const props = withDefaults(defineProps<Props>(), {
   position: absolute;
   content: "";
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   border-radius: inherit;
   transition: opacity 0.3s, box-shadow 0.3s, border-color 0.2s, background 0.3s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   background: transparent;
@@ -46,7 +46,6 @@ const props = withDefaults(defineProps<Props>(), {
 
 [data-icon-only]:hover::before {
   transform: scale(0.92) translateZ(0);
-  border: 2px solid hsl(var(--primary));
   opacity: 1;
 }
 </style>

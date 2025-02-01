@@ -19,7 +19,8 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
 
-    --primary: 144.8 100% 40.6%;  /* #00ce44 */
+    --primary: 144.8 100% 40.6%;
+    /* #00ce44 */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -52,7 +53,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
 
-    --primary: 144.8 100% 40.6%;  /* #00ce44 */
+    --primary: 144.8 100% 40.6%;
+    /* #00ce44 */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -70,12 +72,35 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-['Onest'];
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   h1 {
     @apply text-2xl font-bold;
   }
+}
+
+.scroll-bar::-webkit-scrollbar {
+  width: 14px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+  border-radius: 0px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: hsl(var(--foreground));
+  border-radius: 0px;
+  border: 0px solid #555777;
+}
+
+/* Estilos para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--background));
 }

@@ -8,15 +8,27 @@ const config = useConfig()
     :class="{ 'lg:border-b': config.header.border }"
   >
     <div
-      class="flex h-14 items-center justify-between gap-2 px-4 md:px-8"
+      class="flex h-14 items-center justify-between gap-12 px-4 md:px-8"
       :class="{ 'border-b lg:border-none': config.header.border, 'container max-w-screen-2xl': config.main.padded }"
     >
       <LayoutHeaderLogo
-        class="flex-1 md:flex"
+        class="md:flex"
         :class="[config.header.showTitleInMobile ? 'flex' : 'hidden']"
       />
-      <div class="flex flex-1 justify-end gap-2">
-        <div class="flex">
+      <NuxtLink
+        to="/getting-started"
+        class="text-sm hover:text-primary cursor-pointer text-muted-foreground"
+      >
+        Documentation
+      </NuxtLink>
+      <NuxtLink
+        to="/"
+        class="text-sm hover:text-primary cursor-pointer text-muted-foreground"
+      >
+        Demos
+      </NuxtLink>
+      <div class="flex ml-auto justify-end gap-2">
+        <div class="flex gap-2">
           <LayoutHeaderSearch />
           <LayoutHeaderThemeSwitch />
           <NuxtLink

@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     'motion-v/nuxt',
     '@nuxt/icon',
     'nuxt-og-image',
+    '@nuxt/fonts',
   ],
   shadcn: {
     /**
